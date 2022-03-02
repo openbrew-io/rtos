@@ -7,9 +7,11 @@ pub mod context;
 use system::ActorSystem;
 use context::Context;
 
+use crate::platform::PidType;
+
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct Handle<T> {
-    id: u32,
+    id: PidType,
     phantom: PhantomData<T>,
 }
 
